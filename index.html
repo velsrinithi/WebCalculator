@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090d14">
+    <meta name="description" content="A modern web calculator built using HTML, CSS and JavaScript.">
+    <title>NEON | Web Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar">
+        <a href="#" class="brand">
+            <span class="brand-icon">N<span>.</span></span>
+            <span class="brand-name">
+                NEON
+                <small>DIGITAL CALCULATION LAB</small>
+            </span>
+        </a>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+
+        <span class="version">WEB APP / 001</span>
+    </header>
+
+    <main class="main-container">
+
+        <section class="hero">
+            <div class="eyebrow">
+                <span class="eyebrow-line"></span>
+                PRECISION IN EVERY INPUT
+            </div>
+
+            <h1>Numbers.<br><span>Without limits.</span></h1>
+
+            <p class="hero-description">
+                A smarter space for everyday calculations.
+                Clean design, instant results, zero distractions.
+            </p>
+
+            <div class="feature-tags">
+                <span>01 / ARITHMETIC</span>
+                <span>02 / REAL-TIME INPUT</span>
+                <span>03 / KEYBOARD READY</span>
+            </div>
+        </section>
+
+        <section class="calculator-section">
+            <div class="section-label">
+                <span>YOUR WORKSPACE</span>
+                <span>PRECISION LAB — 01</span>
+            </div>
+
+            <div class="calculator-card">
+
+                <div class="card-heading">
+                    <div class="calculator-identity">
+                        <div class="calculator-icon">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect x="4" y="2.5" width="16" height="19"
+                                      rx="3" stroke="currentColor"
+                                      stroke-width="1.5"/>
+                                <rect x="8" y="6" width="8" height="4"
+                                      rx="1" stroke="currentColor"
+                                      stroke-width="1.5"/>
+                                <path d="M8 14H8.01M12 14H12.01M16 14H16.01M8 17.5H8.01M12 17.5H12.01M16 17.5H16.01"
+                                      stroke="currentColor"
+                                      stroke-width="2.5"
+                                      stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <span class="tool-label">CALCULATOR / 001</span>
+                            <h2>Precision Engine</h2>
+                        </div>
+                    </div>
+
+                    <span class="live-badge">LIVE</span>
+                </div>
+
+                <div class="display">
+                    <div class="display-header">
+                        <span>INPUT / OUTPUT</span>
+                        <span id="status">READY</span>
+                    </div>
+
+                    <div id="expression"
+                         class="expression"
+                         aria-label="Calculation expression">0</div>
+
+                    <output id="result"
+                            class="result"
+                            aria-live="polite"
+                            aria-atomic="true">0</output>
+                </div>
+
+                <div class="keypad" id="keypad">
+
+                    <button type="button"
+                            class="key utility"
+                            data-action="clear"
+                            aria-label="Clear all">C</button>
+
+                    <button type="button"
+                            class="key utility"
+                            data-action="backspace"
+                            aria-label="Delete last digit">DEL</button>
+
+                    <button type="button"
+                            class="key utility"
+                            data-action="sign"
+                            aria-label="Change sign">+/−</button>
+
+                    <button type="button"
+                            class="key operator"
+                            data-operator="/"
+                            aria-label="Divide">÷</button>
+
+                    <button type="button" class="key" data-digit="7">7</button>
+                    <button type="button" class="key" data-digit="8">8</button>
+                    <button type="button" class="key" data-digit="9">9</button>
+
+                    <button type="button"
+                            class="key operator"
+                            data-operator="*"
+                            aria-label="Multiply">×</button>
+
+                    <button type="button" class="key" data-digit="4">4</button>
+                    <button type="button" class="key" data-digit="5">5</button>
+                    <button type="button" class="key" data-digit="6">6</button>
+
+                    <button type="button"
+                            class="key operator"
+                            data-operator="-"
+                            aria-label="Subtract">−</button>
+
+                    <button type="button" class="key" data-digit="1">1</button>
+                    <button type="button" class="key" data-digit="2">2</button>
+                    <button type="button" class="key" data-digit="3">3</button>
+
+                    <button type="button"
+                            class="key operator"
+                            data-operator="+"
+                            aria-label="Add">+</button>
+
+                    <button type="button"
+                            class="key zero"
+                            data-digit="0">0</button>
+
+                    <button type="button"
+                            class="key"
+                            data-action="decimal"
+                            aria-label="Decimal point">.</button>
+
+                    <button type="button"
+                            class="key equals"
+                            data-action="equals"
+                            aria-label="Calculate result">=</button>
+                </div>
+
+                <p id="message" class="message" aria-live="polite">
+                    Ready when you are.
+                </p>
+
+                <div class="keyboard-hint">
+                    <span>⌨ KEYBOARD ENABLED</span>
+                    <span>ESC TO CLEAR</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-note">
+            <div class="note-icon">N.</div>
+            <div>
+                <h3>Built for clarity.</h3>
+                <p>Thoughtful design meets reliable calculations.</p>
+            </div>
+            <span class="technology">HTML · CSS · JAVASCRIPT</span>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <span>NEON CALCULATOR © 2026</span>
+        <span>DESIGNED FOR EVERYDAY PRECISION</span>
+    </footer>
+
+</body>
+</html>
