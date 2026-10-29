@@ -93,7 +93,7 @@ The application can be hosted for free using GitHub Pages.
 
 The website URL will follow this format:
 
-`https://YOUR-USERNAME.github.io/WebCalculator/`
+`https://velsrinithi.github.io/WebCalculator/`
 
 ## 🎯 Learning Objectives
 
